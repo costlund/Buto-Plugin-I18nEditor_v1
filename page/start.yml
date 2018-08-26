@@ -1,0 +1,26 @@
+settings:
+  layout:
+    - html
+    - main
+  title: I18n editor
+content:
+  -
+    type: div
+    innerHTML:
+      -
+        type: a
+        attribute:
+          onclick: PluginWfAjax.update('start')
+          style: 'float:right'
+        innerHTML: Update
+  -
+    type: div
+    attribute:
+      id: start
+    innerHTML: 'start...'
+  -
+    type: script
+    innerHTML: |
+      PluginWfAjax.load('start', '/[[class]]/list');
+
+  

@@ -1,0 +1,9 @@
+content:
+  -
+    type: widget
+    data:
+      plugin: wf/form_v2
+      method: render
+      data: yml:/plugin/i18n/editor_v1/form/edit.yml
+
+  

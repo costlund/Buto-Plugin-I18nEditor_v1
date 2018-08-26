@@ -1,0 +1,35 @@
+settings:
+  path: '2/innerHTML/main/innerHTML/form/innerHTML'
+content:
+  -
+    type: style
+    innerHTML: '.wf_form_row{margin-top:10px;}'
+  -
+    type: div
+    attribute:
+      class: 'container-fluid'
+    innerHTML:
+      -
+        type: h1
+        innerHTML: I18N Editor
+  -
+    type: div
+    attribute:
+      class: 'container-fluid'
+    innerHTML:
+      main:
+        type: div
+        attribute:
+          class: 'panel panel-default'
+        innerHTML:
+          heading:
+            type: div
+            attribute:
+              class: 'panel-heading'
+            innerHTML: 'I18N editor'
+          form:
+            type: div
+            attribute:
+              class: 'panel-body'
+            innerHTML:
+      

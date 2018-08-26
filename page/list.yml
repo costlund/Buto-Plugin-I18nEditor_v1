@@ -1,0 +1,12 @@
+content:
+  -
+    type: widget
+    data:
+      plugin: wf/table
+      method: render_many
+      data:
+        datatable:
+          disabled: false
+        rs: rs:data
+
+  

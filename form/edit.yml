@@ -1,0 +1,19 @@
+url: 'capture'
+ajax: true
+submit_value: Save
+id: frm
+items:
+  key:
+    type: varchar
+    label: Key
+    default: 'rs:key'
+    mandatory: true
+#  sv:
+#    type: text
+#    label: sv
+render:
+  plugin: 'i18n/editor_v1'
+  method: edit_render
+capture:
+  plugin: 'i18n/editor_v1'
+  method: edit_capture
