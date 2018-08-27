@@ -1,5 +1,6 @@
 <?php
 class PluginI18nEditor_v1{
+  private $settings = null;
   function __construct($buto) {
     if($buto){
       /**¨
@@ -22,6 +23,10 @@ class PluginI18nEditor_v1{
        * Unset i18n event for this module.
        */
       $GLOBALS = wfArray::setUnset($GLOBALS, 'sys/settings/events/document_render_string');
+      /**
+       * Settings.
+       */
+      $this->settings = new PluginWfArray(wfArray::get($GLOBALS, 'sys/settings/plugin_modules/'.wfArray::get($GLOBALS, 'sys/class').'/settings'));
     }
   }
   /**
@@ -29,6 +34,13 @@ class PluginI18nEditor_v1{
    */
   public function page_start(){
     $page = $this->getYml('page/start');
+    /**
+     * Insert admin layout from theme.
+     */
+    $page = wfDocument::insertAdminLayout($this->settings, 1, $page);
+    /**
+     * 
+     */
     wfDocument::mergeLayout($page->get());
   }
   /**
