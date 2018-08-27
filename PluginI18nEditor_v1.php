@@ -54,6 +54,21 @@ class PluginI18nEditor_v1{
     wfDocument::mergeLayout($page->get());
   }
   /**
+   * 
+   */
+  public function page_delete(){
+    $this->delete();
+    $page = $this->getYml('page/delete');
+    wfDocument::mergeLayout($page->get());
+  }
+  /**
+   * 
+   */
+  public function page_add(){
+    $page = $this->getYml('page/add');
+    wfDocument::mergeLayout($page->get());
+  }
+  /**
    * Render data in form.
    */
   public function edit_render($form){
@@ -78,6 +93,16 @@ class PluginI18nEditor_v1{
       $file->save();
     }
     return array("$('.modal').modal('hide');");
+  }
+  private function delete(){
+    $key = urldecode(wfRequest::get('key'));
+    $languages = wfConfig::getI18nLanguages();
+    foreach ($languages as $k => $value) {
+      $file = $this->get_file($value);
+      $file->setUnset($key);
+      $file->save();
+    }
+    return null;
   }
   /**
    * Get yml file.

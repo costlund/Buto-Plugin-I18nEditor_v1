@@ -1,0 +1,29 @@
+content:
+  -
+    type: form
+    innerHTML:
+      -
+        type: div
+        attribute:
+          class: form-group
+        innerHTML:
+          -
+            type: input
+            attribute:
+              class: form-control
+              type: text
+              id: i18n_add
+  -
+    type: a
+    attribute:
+      onclick: |
+        if(document.getElementById('i18n_add').value){
+          $('.modal').modal('hide');
+          PluginWfBootstrapjs.modal({id: 'modal_i18neditor_edit', url: '/'+document.getElementById('hidden_class').innerHTML+'/edit/key/'+document.getElementById('i18n_add').value, lable: 'Edit'});
+        }else{
+          alert('Enter a key.');
+        }
+      class: btn btn-primary
+    innerHTML: Add
+
+  

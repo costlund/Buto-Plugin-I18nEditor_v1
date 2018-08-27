@@ -17,3 +17,20 @@ render:
 capture:
   plugin: 'i18n/editor_v1'
   method: edit_capture
+buttons:
+  -
+    type: a
+    attribute:
+      class: btn btn-default
+      onclick: "$('.modal').modal('hide');"
+    innerHTML: Cancel
+elements_below:
+  -
+    type: script
+    innerHTML: document.getElementById('frm_key').readOnly=true
+  -
+    type: a
+    attribute:
+      onclick: PluginWfAjax.load('hidden_div', '/'+document.getElementById('hidden_class').innerHTML+'/delete/key/'+document.getElementById('frm_key').value)
+    innerHTML: Delete
+ 

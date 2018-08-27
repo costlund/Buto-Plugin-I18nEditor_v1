@@ -1,0 +1,6 @@
+content:
+  -
+    type: script
+    innerHTML: "$('.modal').modal('hide');"
+
+  

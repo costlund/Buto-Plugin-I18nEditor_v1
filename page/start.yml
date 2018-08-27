@@ -5,19 +5,22 @@ settings:
   title: I18n editor
 content:
   -
-    type: div
-    innerHTML:
-      -
-        type: a
-        attribute:
-          onclick: PluginWfAjax.update('start')
-          style: 'float:right'
-        innerHTML: Update
+    type: p
+    attribute:
+      id: hidden_class
+      style: 'display:none'
+    innerHTML: '[[class]]'
   -
     type: div
     attribute:
       id: start
     innerHTML: 'start...'
+  -
+    type: div
+    attribute:
+      id: hidden_div
+      style: 'display:none'
+    innerHTML: ''
   -
     type: script
     innerHTML: |
