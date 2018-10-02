@@ -22,3 +22,11 @@ plugin:
         path: '/data/theme/[theme]/i18n'
 ```
 
+I18N settings.
+
+````
+i18n:
+  language: sv_SE
+  languages:
+    - sv_SE
+````
