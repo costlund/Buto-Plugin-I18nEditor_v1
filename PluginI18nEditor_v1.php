@@ -15,6 +15,9 @@ class PluginI18nEditor_v1{
       wfPlugin::enable('wf/bootstrap');
       wfPlugin::enable('wf/form_v2');
       wfPlugin::enable('wf/table');
+      wfPlugin::enable('wf/bootstrapjs');
+      wfPlugin::enable('wf/dom');
+      wfPlugin::enable('datatable/datatable_1_10_16');
       /**
        * Layout path.
        */
@@ -157,20 +160,23 @@ class PluginI18nEditor_v1{
     foreach ($languages as $key => $la) {
       $file = $this->get_file($la);
       foreach ($file->get() as $key2 => $value2) {
+        /**
+         * Set i18n key.
+         */
         $rs->set($key2.'/innerHTML', $key2);
+        /**
+         * Render all languages for the key to make PluginWfTable to work.
+         */
+        foreach ($languages as $l) {
+          if(!isset($rs->array[$key2][$l])){
+            $rs->set($key2.'/'.$l, null);
+          }
+        }
+        /**
+         * Set values.
+         */
         $rs->set($key2.'/'.$la, $value2);
         $rs->set($key2.'/row_click', "PluginWfBootstrapjs.modal({id: 'modal_i18neditor_edit', url: '/$class/edit/key/$key2', lable: 'Edit'});");
-      }
-    }
-    /**
-     * Fix so there is no missing keys for PluginWfTable to fail on.
-     */
-    foreach ($rs->get() as $key => $value) {
-      $item = new PluginWfArray($value);
-      foreach ($languages as $k => $la) {
-        if(!$item->get($la)){
-          $rs->set($key.'/'.$la, null);
-        }
       }
     }
     return $rs;
