@@ -25,7 +25,7 @@ class PluginI18nEditor_v1{
       /**
        * Unset i18n event for this module.
        */
-      $GLOBALS = wfArray::setUnset($GLOBALS, 'sys/settings/events/document_render_string');
+      wfPlugin::event_remove('document_render_string', 'i18n/translate_v1');
       /**
        * Settings.
        */
