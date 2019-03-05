@@ -51,7 +51,8 @@ class PluginI18nEditor_v1{
    */
   public function page_list(){
     $page = $this->getYml('page/list');
-    $page->setByTag(array('data' => $this->get_all()->get()));
+    $rs = $this->get_all();
+    $page->setByTag(array('data' => $rs->get()));
     wfDocument::mergeLayout($page->get());
   }
   /*

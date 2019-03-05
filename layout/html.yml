@@ -1,15 +1,5 @@
 settings:
   path: 'html/innerHTML/body/innerHTML'
-  rewrite_globals:
-    -
-      key: 'sys/settings/plugin/wf/bootstrap/enabled'
-      value: true
-    -
-      key: 'sys/settings/plugin/wf/callbackjson/enabled'
-      value: true
-    -
-      key: 'sys/settings/plugin/wf/formupload/enabled'
-      value: true
 content:
   doctype:
     type: text
@@ -22,40 +12,35 @@ content:
       head:
         type: head
         innerHTML:
-          title:
+          -
             type: title
             innerHTML: 'globals:sys/page/settings/title'
-          bootstrap_all:
+          -
             type: widget
             data:
               plugin: 'twitter/bootstrap335v'
               method: all
-          ajax:
+          -
             type: widget
             data:
               plugin: 'wf/ajax'
               method: include
-          bootstrapjs:
+          -
             type: widget
             data:
               plugin: 'wf/bootstrapjs'
               method: include
-          wf_callbackjson:
+          -
             type: widget
             data:
               plugin: 'wf/callbackjson'
               method: include
-          wf_dom:
+          -
             type: widget
             data:
               plugin: 'wf/dom'
               method: include
-          wf_upload:
-            type: widget
-            data:
-              plugin: 'wf/formupload'
-              method: include
-          datatable:
+          -
             type: widget
             data:
               plugin: datatable/datatable_1_10_16
