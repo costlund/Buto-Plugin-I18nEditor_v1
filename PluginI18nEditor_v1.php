@@ -18,7 +18,10 @@ class PluginI18nEditor_v1{
       wfPlugin::enable('wf/bootstrapjs');
       wfPlugin::enable('wf/dom');
       wfPlugin::enable('datatable/datatable_1_10_16');
-      /**
+      wfPlugin::enable('twitter/bootstrap335v');
+      wfPlugin::enable('wf/ajax');
+      wfPlugin::enable('wf/callbackjson');
+    /**
        * Layout path.
        */
       wfArray::set($GLOBALS, 'sys/layout_path', '/plugin/i18n/editor_v1/layout');
