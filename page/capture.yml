@@ -2,7 +2,7 @@ content:
   -
     type: widget
     data:
-      plugin: wf/form_v2
+      plugin: form/form_v1
       method: capture
       data: yml:/plugin/i18n/editor_v1/form/edit.yml
 

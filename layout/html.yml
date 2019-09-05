@@ -18,36 +18,12 @@ content:
           -
             type: widget
             data:
-              plugin: 'twitter/bootstrap335v'
-              method: all
-          -
-            type: widget
-            data:
-              plugin: 'wf/ajax'
-              method: include
-          -
-            type: widget
-            data:
-              plugin: 'wf/bootstrapjs'
-              method: include
-          -
-            type: widget
-            data:
-              plugin: 'wf/callbackjson'
-              method: include
-          -
-            type: widget
-            data:
-              plugin: 'wf/dom'
-              method: include
-          -
-            type: widget
-            data:
-              plugin: datatable/datatable_1_10_16
+              plugin: 'theme/include'
               method: include
               data:
-                style: bootstrap
-                _: 'Change style to bootstrap if needed.'
+                bootswatch:
+                  theme: Cerulean
+
       body:
         type: body
         innerHTML: 'body...'

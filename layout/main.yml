@@ -10,99 +10,26 @@ content:
       class: 'container-fluid'
     innerHTML:
       -
-        type: nav
-        attribute:
-          class: 'navbar navbar-default'
-        innerHTML:
-          -
-            type: div
-            attribute:
-              class: navbar-header
-            innerHTML:
-              -
-                type: button
-                attribute:
-                  type: button
-                  class: 'navbar-toggle collapsed'
-                  data-toggle: collapse
-                  data-target: '#bs-example-navbar-collapse-2'
-                  aria-expanded: 'false'
-                innerHTML:
-                  0:
-                    type: span
-                    attribute:
-                      class: icon-bar
-                  1:
-                    type: span
-                    attribute:
-                      class: icon-bar
-                  3:
-                    type: span
-                    attribute:
-                      class: icon-bar
-              -
-                type: a
-                attribute:
-                  class: navbar-brand
-                  href: /doc/home
-                innerHTML:
-                  -
-                    type: span
-                    attribute:
-                      class: 'glyphicon glyphicon-fire'
-                      aria-hidden: true
-                  -
-                    type: strong
-                    innerHTML: I18N Editor
-          -
-            type: div
-            attribute:
-              class: 'collapse navbar-collapse'
-              id: bs-example-navbar-collapse-2
-            innerHTML:
-              -
-                type: ul
-                attribute:
-                  class: 'nav navbar-nav'
-                innerHTML:
-                  -
-                    type: li
-                    innerHTML:
-                      -
-                        type: a
-                        innerHTML: List
-                        attribute:
-                          onclick: PluginWfAjax.update('start')
-                  -
-                    type: li
-                    innerHTML:
-                      -
-                        type: a
-                        innerHTML: Add
-                        attribute:
-                          onclick: "PluginWfBootstrapjs.modal({id: 'modal_i18neditor_edit', url: '/'+document.getElementById('hidden_class').innerHTML+'/add', lable: 'Add'});"
-              -
-                type: p
-                innerHTML:
-                  -
-                    type: span
-                    attribute:
-                      class: 'glyphicon glyphicon-user'
-                      aria-hidden: true
-                  -
-                    type: span
-                    innerHTML: 'globals:_SESSION/email'
-                attribute:
-                  class: navbar-text
-                  style: 'float: right'
-                settings:
-                  role:
-                    allow: true
-                    item:
-                      - client
+        type: widget
+        data:
+          plugin: 'bootstrap/navbar_v1'
+          method: navbar
+          data:
+            _: 'https://getbootstrap.com/docs/4.0/components/navbar/'
+            brand: I18N
+            navbar:
+              id: _my_navbar_i18n_
+              item:
+                -
+                  text: List
+                  onclick: PluginWfAjax.update('start')
+                -
+                  text: Add
+                  onclick: "PluginWfBootstrapjs.modal({id: 'modal_i18neditor_edit', url: '/'+document.getElementById('hidden_class').innerHTML+'/add', lable: 'Add'});"
   -
     type: div
     attribute:
       class: 'container-fluid'
+      style: 'padding-top:20px'
     innerHTML:
       

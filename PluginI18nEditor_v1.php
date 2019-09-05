@@ -3,24 +3,16 @@ class PluginI18nEditor_v1{
   private $settings = null;
   function __construct($buto) {
     if($buto){
-      /**¨
-       * ¨Include.
+      /**
+       * Include.
        */
-      wfPlugin::includeonce('wf/form_v2');
+      wfPlugin::includeonce('theme/include');
       wfPlugin::includeonce('wf/array');
       wfPlugin::includeonce('wf/yml');
       /**
        * Enable.
        */
-      wfPlugin::enable('wf/bootstrap');
-      wfPlugin::enable('wf/form_v2');
       wfPlugin::enable('wf/table');
-      wfPlugin::enable('wf/bootstrapjs');
-      wfPlugin::enable('wf/dom');
-      wfPlugin::enable('datatable/datatable_1_10_16');
-      wfPlugin::enable('twitter/bootstrap335v');
-      wfPlugin::enable('wf/ajax');
-      wfPlugin::enable('wf/callbackjson');
     /**
        * Layout path.
        */
@@ -91,6 +83,7 @@ class PluginI18nEditor_v1{
    * Render data in form.
    */
   public function edit_render($form){
+    $form = new PluginWfArray($form);
     $key = urldecode(wfRequest::get('key'));
     $all = $this->get_all();
     $languages = wfConfig::getI18nLanguages();
@@ -98,7 +91,7 @@ class PluginI18nEditor_v1{
       $form->set("items/$value", array('type' => 'text', 'label' => $value, 'default' => $all->get("$key/$value")));
     }
     $form->setByTag(array('key' => $key));
-    return $form;
+    return $form->get();
   }
   /**
    * Capture data from form.

@@ -1,5 +1,8 @@
-version: '1.1'
+version: '1.2'
 history:
+  '1.2':
+    date: '2019-09-05'
+    description: 'Using Bootstrap 4.'
   '1.1':
     date: '2018-11-30'
     description: 'Use method wfPlugin::event_remove to disable i18n.'
@@ -8,29 +11,17 @@ history:
     description: 'First version.'
 plugin:
   -
-    name: wf/form_v2
-    version: 1.4
-  -
     name: wf/array
     version: 1.0.1
   -
     name: wf/yml
     version: '1.1'
   -
-    name: wf/bootstrap
-    version: '1.0'
-  -
     name: wf/table
-    version: '1.0'
+    version: '1.9'
   -
-    name: wf/bootstrapjs
-    version: '1.0'
-  -
-    name: wf/dom
-    version: '1.0'
-  -
-    name: datatable/datatable_1_10_16
-    version: '1.0'
+    name: theme/include
+    version: '1.4'
 sys:
   -
     name: mercury
@@ -40,5 +31,4 @@ php:
   - '7.2'
 author: null
 links:
-  Github: 'https://github.com'
 description: ''

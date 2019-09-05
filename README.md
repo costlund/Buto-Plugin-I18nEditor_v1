@@ -1,7 +1,9 @@
 # Buto-Plugin-I18nEditor_v1
+
 Plugin page to edit i18n files.
 
 ## Settings
+
 Data in theme settings.yml.
 
 To call this plugin via url "/my_i18n_editor/start". Value "my_i18n_editor" can be anything.
@@ -22,7 +24,9 @@ plugin:
         path: '/data/theme/[theme]/i18n'
 ```
 
-I18N settings.
+## Theme
+
+Theme settings.
 
 ````
 i18n:
