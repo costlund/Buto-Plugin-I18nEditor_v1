@@ -12,16 +12,16 @@ history:
 plugin:
   -
     name: wf/array
-    version: 1.0.1
+    version: 1.2.0
   -
     name: wf/yml
-    version: '1.1'
+    version: 1.2.2
   -
     name: wf/table
-    version: '1.9'
+    version: 1.20.0
   -
     name: theme/include
-    version: '1.4'
+    version: 1.7.1
 sys:
   -
     name: mercury
@@ -30,5 +30,5 @@ sys:
 php:
   - '7.2'
 author: null
-links:
+links: null
 description: ''
