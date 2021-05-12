@@ -1,5 +1,9 @@
-version: '1.2'
+version: 1.2.1
 history:
+  1.2.1:
+    date: '2021-05-12'
+    title: Versions
+    description: 'Versions update.'
   '1.2':
     date: '2019-09-05'
     description: 'Using Bootstrap 4.'
@@ -18,10 +22,10 @@ plugin:
     version: 1.3.0
   -
     name: wf/table
-    version: 1.22.0
+    version: 1.23.0
   -
     name: theme/include
-    version: 1.8.0
+    version: 1.8.2
 sys:
   -
     name: mercury
