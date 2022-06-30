@@ -1,5 +1,9 @@
-version: 1.2.10
+version: 1.2.11
 history:
+  1.2.11:
+    date: '2022-06-30'
+    title: Form
+    description: 'Put elements after.'
   1.2.10:
     date: '2022-06-08'
     title: Versions

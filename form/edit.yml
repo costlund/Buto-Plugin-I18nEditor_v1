@@ -24,10 +24,11 @@ buttons:
       class: btn btn-default
       onclick: "$('.modal').modal('hide');"
     innerHTML: Cancel
-elements_below:
+elements_after:
   -
     type: script
     innerHTML: document.getElementById('frm_key').readOnly=true
+elements_below:
   -
     type: a
     attribute:
