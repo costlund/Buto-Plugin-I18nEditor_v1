@@ -1,5 +1,9 @@
-version: 1.2.11
+version: 1.2.12
 history:
+  1.2.12:
+    date: '2022-08-11'
+    title: Versions
+    description: 'Versions update.'
   1.2.11:
     date: '2022-06-30'
     title: Form
@@ -62,10 +66,10 @@ plugin:
     version: 1.4.0
   -
     name: wf/table
-    version: 1.31.0
+    version: 1.31.1
   -
     name: theme/include
-    version: 1.10.5
+    version: 1.11.0
 sys:
   -
     name: mercury
