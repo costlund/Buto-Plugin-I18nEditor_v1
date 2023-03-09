@@ -1,5 +1,9 @@
-version: 1.2.16
+version: 1.2.17
 history:
+  1.2.17:
+    date: '2023-03-09'
+    title: Versions
+    description: 'Versions update.'
   1.2.16:
     date: '2023-01-02'
     title: Versions
@@ -82,10 +86,10 @@ plugin:
     version: 1.5.1
   -
     name: wf/table
-    version: 1.32.1
+    version: 1.33.0
   -
     name: theme/include
-    version: 1.16.0
+    version: 1.16.4
 sys:
   -
     name: mercury
