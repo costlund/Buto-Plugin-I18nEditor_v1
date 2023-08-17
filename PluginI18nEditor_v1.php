@@ -16,7 +16,7 @@ class PluginI18nEditor_v1{
     /**
        * Layout path.
        */
-      wfArray::set($GLOBALS, 'sys/layout_path', '/plugin/i18n/editor_v1/layout');
+      wfGlobals::setSys('layout_path', '/plugin/i18n/editor_v1/layout');
       /**
        * Unset i18n event for this module.
        */
